@@ -1,13 +1,10 @@
-// Include the iostream library to enable input/output streams, like std::cout.
 #include <iostream>
-
-// Include the string library to enable using the string type.
 #include <string>
+#include <array>
+#include <vector>
 
-// The main function is where the program starts executing.
-int main() {
-    //? ======= Fundamental Data Types in C++ =======
-    bool is_true = true;
+void primitive_data_types() {
+    bool is_true = false;
 
     // An integer can hold whole numbers (no decimal points).
     int num = 10;
@@ -31,8 +28,49 @@ int main() {
     std::cout << "Double: " << precise_decimal << std::endl;
     std::cout << "Character: " << letter << std::endl;
     std::cout << "String: " << message << std::endl;
+    std::cout << "=========================" << std::endl;
+}
 
-    // The return statement ends the program. 
-    // Returning 0 indicates that the program has finished successfully.
+void compound_data_types() {
+    // Array: fixed-size sequence of elements of the same type
+    std::array<int, 3> arr = {1, 2, 3};
+    std::cout << "Array: ";
+    for(int i = 0; i < arr.size(); i++) {
+        std::cout << arr[i] << ' ';
+    }
+    std::cout << std::endl;
+
+    // Vector: dynamic-size sequence of elements of the same type
+    std::vector<std::string> vec = {"Hello", "World"};
+    std::cout << "Vector: ";
+    for(const auto &str : vec) {
+        std::cout << str << ' ';
+    }
+    std::cout << std::endl;
+
+    // Pointer: holds memory address of another variable
+    int num = 10;
+    int* p = &num;  // pointer to num
+    std::cout << "Pointer: " << *p << std::endl;  // *p dereferences the pointer, i.e., gets the value that p points to
+
+    // Enumeration: user-defined type with values that you specify
+    enum Color {red, green, blue};
+    Color my_color = blue;
+    std::cout << "Enumeration: " << my_color << std::endl;
+
+    // Structure: user-defined type that can hold different types of variables
+    struct Point {
+        int x;
+        int y;
+    };
+    Point p1 = {10, 20};
+    std::cout << "Structure: " << p1.x << ' ' << p1.y << std::endl;
+
+    std::cout << "=========================" << std::endl;
+}
+
+int main() {
+    primitive_data_types();
+    compound_data_types();
     return 0;
 }
