@@ -176,13 +176,20 @@ void streams() {
 
     // 2. Console Input (cin)
     std::string name;
-    std::cout << "Please enter your name: ";
-    std::cin >> name;
+    int age;
+
+    std::cout << "Please enter your name, followed by age: " << std::endl;
+    // std::cin >> age;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Ignore the newline left over from cin
+
+    // std::cin >> name;
+    std::getline(std::cin, name); // ? will allow spaces
+
 
     // 3. File Output (ofstream)
     std::ofstream outfile("test.txt");
     if(outfile.is_open()) {
-        outfile << "Hello, " << name << "!\n";
+        outfile << "Hello " << name << " are you really " << age << "?!\n";
         outfile.close();
     } else {
         std::cout << "Unable to open file for writing.";
@@ -213,7 +220,7 @@ int main() {
     // primitive_data_types();
     // compound_data_types();
     // control_flow();
-    // streams();
+    streams();
 
     return 0;
 }
