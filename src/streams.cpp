@@ -1,8 +1,9 @@
+#include "../include/streams.h"
+
 #include <iostream>
 #include <string>
 #include <fstream> 
 
-#include "../include/streams.h"
 
 void streams() {
     //? std::cout is used to output text to the console.

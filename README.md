@@ -44,6 +44,10 @@ If you want to automatically rebuild and run your project whenever a file change
 ```bash
 sudo apt-get install entr
 ```
+OR
+```bash
+brew install entr 
+```
 
 Once `entr` is installed, you can use the following command to watch for file changes and automatically rebuild and run your project:
 

@@ -60,8 +60,6 @@ void control_flow() {
     }
 
     // 6. Exceptions
-
-
     //? ------- Define a lambda function for division
     auto divide = [](double numerator, double denominator) {
         if(denominator == 0) {

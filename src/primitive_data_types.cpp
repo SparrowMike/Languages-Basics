@@ -1,6 +1,7 @@
+#include "../include/primitive_data_types.h"
+
 #include <iostream>
 
-#include "../include/primitive_data_types.h"
 
 /* Primitive data types:
     Integer types (int, short, long, long long)
@@ -25,6 +26,15 @@ void primitive_data_types() {
 
     // A string can hold a sequence of characters.
     const std::string message {"Hello, World!"}; //! ------ curly braces - newer C++11 syntax - considered safer
+
+    // Assignment Initialization
+    int assignment_init {100};
+
+    // Braced initialization 
+    int braced_init {100};
+
+    // Functional initialization
+    int functional_init (100);
 
     // std::endl is used to create a new line after each variable's value.
     std::cout << "Boolean: " << is_true << std::endl;

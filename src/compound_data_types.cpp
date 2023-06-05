@@ -1,9 +1,9 @@
+#include "../include/compound_data_types.h"
+
 #include <iostream>
 #include <vector>
 #include <array>
 #include <string>
-
-#include "../include/compound_data_types.h"
 
 /* Compound data types
     Arrays: Allow us to store and work with multiple variables of the same type.
