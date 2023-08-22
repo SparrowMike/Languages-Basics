@@ -1,5 +1,3 @@
-export 'variables.dart';
-
 void printDataTypeExamples() {
   // Integer data type
   int age = 25;
